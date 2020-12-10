@@ -40,7 +40,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a id="logo" class="navbar-brand ml-6" href="<?= site_url("index")?>">running<br>everyday</a>
+        <a id="logo" class="navbar-brand ml-6" href="<?= site_url("index")?>"><img src="<?php echo $this->config->item('base_url'); ?>/assets/img/running.png" style="height:60px;width:50px"> running everyday</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><img src="<?php echo $this->config->item('base_url'); ?>/assets/logocut.png"></span>
         </button>
@@ -70,14 +70,14 @@
                     <img class="d-block w-100" src="<?php echo $this->config->item('base_url'); ?>/assets/img/hero-1.jpg" alt="First slide">
                     <div class="carousel-caption">
                         <h3 style="font-size:40px;font-family:Poppins,sans-seriff;">running everyday</h3>
-                        <button id ="form-text" class="btn btn-lg btn-primary btn-block mx-auto mb-4" type="submit" style="color:white;width:200px" onclick="joinUs()">Join Us Now</button>
+                        <button id ="form-text" class="btn btn-lg btn-primary btn-block mx-auto mb-4" type="submit" style="color:white;width:200px" onclick="joinUs()"><b>Join Us Now</b></button>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="<?php echo $this->config->item('base_url'); ?>/assets/img/hero-2.jpg" alt="Second slide">
                     <div class="carousel-caption">
                         <h3 style="font-size:40px;font-family:Poppins,sans-seriff;">running everyday</h3>
-                        <button id ="form-text" class="btn btn-lg btn-primary btn-block mx-auto mb-4" type="submit" style="color:white;width:200px" onclick="joinUs()">Join Us Now</button>
+                        <button id ="form-text" class="btn btn-lg btn-primary btn-block mx-auto mb-4" type="submit" style="color:white;width:200px" onclick="joinUs()"><b>Join Us Now</b></button>
                     </div>
                 </div>
             </div>

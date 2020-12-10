@@ -29,7 +29,7 @@ class loginController extends CI_Controller {
 				$this->session->set_userdata('userFile',$userdata);
 				redirect('menuController');
 			}else{
-				$this->session->set_flashdata('messages','<div class="alert alert-danger mt-3" style="color:red;font-family:Poppins,sans-seriff; font-size: 14px;"> login failed </div>');
+				$this->session->set_flashdata('messages','<div class="alert alert-danger mt-3" style="color:red;font-family:Poppins,sans-seriff; font-size: 14px;font-weight:bold"> login failed </div>');
 				redirect('loginController');
 			}
 		}else{

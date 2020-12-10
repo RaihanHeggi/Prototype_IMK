@@ -47,7 +47,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a id="logo" class="navbar-brand ml-6" href="<?= site_url("index")?>">running<br>everyday</a>
+            <a id="logo" class="navbar-brand ml-6" href="<?= site_url("index")?>"><img src="<?php echo $this->config->item('base_url'); ?>/assets/img/running.png" style="height:60px;width:50px"> running everyday</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><img src="<?php echo $this->config->item('base_url'); ?>/assets/logocut.png"></span>
             </button>
@@ -71,7 +71,7 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card card-signin my-5" style="border-radius:25px">
                 <div class="card-body">
-                    <h5 id ="form-text" class="card-title text-center" style="color:black;font-size:30px">Sign In</h5>
+                    <h5 id ="form-text" class="card-title text-center" style="color:black;font-size:30px;font-weight:bold">Sign In</h5>
                     <?php  echo $this->session->flashdata('messages')?>
                     <form class="form-signin" action="<?= site_url('loginController/login')?>" method="post">
                         <div class="form-label-group mt-2">
