@@ -172,7 +172,7 @@
                         <div id="sidebar" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" onclick="menuSetting()" style="color:black;"><span class="fas fa-user"></span>&nbsp;&nbsp;Profile</a>
                             <a class="dropdown-item" onclick="menuSetting()" style="color:black;"><span class="fas fa-tools"></span>&nbsp;&nbsp;Setting</a>
-                            <a class="dropdown-item" onclick="languageSetting()" style="color:black;"><span class="fas fa-language" "></span>&nbsp;&nbsp;Language</a>
+                            <a class="dropdown-item" onclick="languageSettingUpdate()" style="color:black;"><span class="fas fa-language" "></span>&nbsp;&nbsp;Language</a>
                         </div>
                     </li>
                 </ul>
@@ -180,20 +180,33 @@
             </nav>
 
             <div id ="sidebar-text" class="container-fluid">
+                <h1 class="mt-4" style="font-family:Poppins,sans-seriff;">Tracking Menu</h1>
                 <form class="example mt-4" action="javascript:searching()">
                     <input type="text" placeholder="Search.." name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
-                <h1 class="mt-4" style="font-family:Poppins,sans-seriff;">Tracking Menu</h1>
-                <div id="map" class="map"></div>
-                <div class="card bg-dark mx-auto mt-3" style="width: 30rem;">
-                            <div class="card-body">
-                                <h5 class="card-title" style="font-size:30px">Review</h5>
-                                <h6 class="card-subtitle mb-2 ">Running</h6>
-                                <p class="card-text align-items-center justify-content-center d-flex"><strong style="font-size:70px">2000</strong>kcal</p>
-                                <p href="#" class="card-text">Distance : <strong style="font-size:20px">5,78km</strong></p>
-                                <p href="#" class="card-text">Duration : <strong style="font-size:20px">00:30:00</strong></p>
-                            </div>
+                <div id="map" class="map mt-3"></div>
+                <div class="row">
+                    <div class="card bg-dark mx-auto mt-3" style="width: 30rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size:30px">Review</h5>
+                                    <h6 class="card-subtitle mb-2 ">Running</h6>
+                                    <p class="card-text align-items-center justify-content-center d-flex"><strong style="font-size:70px">2000</strong>kcal</p>
+                                    <p href="#" class="card-text">Distance : <strong style="font-size:20px">5,78km</strong></p>
+                                    <p href="#" class="card-text">Duration : <strong style="font-size:20px">00:30:00</strong></p>
+                                </div>
+                    </div>
+                    <div class="card bg-dark mx-auto mt-3" style="width: 30rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="font-size:30px">Klasemen</h5>
+                                    <h6 class="card-subtitle mb-2 ">Running Vila Bogor Indah Track</h6>
+                                    <p></p>
+                                    <p href="#" class="card-text">1. Suparman</p>
+                                    <p href="#" class="card-text">2. Suparjo</p>
+                                    <p href="#" class="card-text">3. Sukirman</p>
+                                    <p href="#" class="card-text"><strong>4. Sya Raihan Heggi</strong></p>
+                                </div>
+                    </div>
                 </div>
                 <hr class="my-4">
                <button id ="form-text" class="btn btn-lg btn-primary btn-block mx-auto mb-4" type="submit" style="color:white;width:400px" onclick="connectDevice()">Connect To Device</button>
@@ -280,9 +293,40 @@
                 }
             })
         }
+        function languageSettingUpdate(){
+            Swal.fire({
+                title: 'Please Select the Language',
+                html: `
+                    <div class="row">
+                        <div class="form-check col-md-4 content-center">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox1">
+                            <label class="form-check-label" for="checkbox1">
+                                English 
+                            </label>
+                        </div>
+                        <div class="form-check col-md-4 content-center">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                            <label class="form-check-label" for="checkbox2">
+                                Indonesia 
+                            </label>
+                        </div>
+                        <div class="form-check col-md-4 content-center">
+                            <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                            <label class="form-check-label" for="checkbox2">
+                                Spanish
+                            </label>
+                        </div>
+                    </div>`,
+                focusConfirm: false,
+                preConfirm: () => {
+                    console.log('Is checkbox1 checked:' + document.getElementById('checkbox1').checked);
+                    console.log('Is checkbox2 checked:' + document.getElementById('checkbox2').checked);
+                }
+            })           
+        }
         function menuSetting(){
             Swal.fire({
-                title: 'Menu Under Constructed',
+                title: 'Menu Under Construction',
                 text: 'currently this menu is under construction',
                 icon: 'error'
             })
